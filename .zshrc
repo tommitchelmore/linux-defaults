@@ -4,3 +4,4 @@ plugins=(git docker zsh-autosuggestions zsh-syntax-highlighting docker-compose n
 source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 alias tb="nc termbin.com 9999"
+neofetch
