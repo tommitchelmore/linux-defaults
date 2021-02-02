@@ -5,6 +5,7 @@ cat /dev/zero | ssh-keygen -t ed25519 -q -N ''
 
 echo "Installing dependencies, AdoptOpenJDK 15 (Go away Oracle!), Node 15 & Yarn..."
 
+sudo apt install zsh
 sudo su - <<EOF
 
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
@@ -14,7 +15,7 @@ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
 apt update && apt upgrade
-apt install -y git zsh neofetch vim apt-transport-https gnupg gcc g++ make nodejs yarn
+apt install -y vim apt-transport-https gnupg gcc g++ make nodejs yarn
 apt install -y neofetch adoptopenjdk-15-hotspot
 
 EOF
