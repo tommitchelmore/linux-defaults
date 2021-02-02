@@ -5,7 +5,7 @@ cat /dev/zero | ssh-keygen -t ed25519 -q -N ''
 
 echo "Installing dependencies, AdoptOpenJDK 15 (Go away Oracle!), Node 15 & Yarn..."
 
-sudo apt install zsh
+sudo apt install -y zsh
 sudo su - <<EOF
 
 wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
